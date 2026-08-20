@@ -54,10 +54,10 @@ export default async function StoryDetailPage({
       </div>
 
       {/* ACHIEVER HERO */}
-      <div className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12 space-y-8">
+      <div className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12 space-y-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between border-b border-black/10 pb-8">
           <div className="flex items-center gap-5">
-            <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-black text-white text-xl font-bold shadow-xl">
+            <div className="flex h-16 w-16 items-center justify-center bg-black text-white text-xl font-bold shadow-xl">
               {story.avatar}
             </div>
             <div>
@@ -69,7 +69,7 @@ export default async function StoryDetailPage({
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 rounded-2xl bg-black/5 p-4 text-center">
+          <div className="grid grid-cols-2 gap-3 bg-black/5 p-4 text-center">
             <div>
               <p className="text-[10px] text-black/60 uppercase font-bold">Total Score</p>
               <p className="font-mono text-xl font-bold">{story.score}</p>
@@ -92,7 +92,7 @@ export default async function StoryDetailPage({
         </div>
 
         {/* FEATURED QUOTE */}
-        <div className="relative rounded-2xl border border-black/10 bg-black/[0.03] p-6 sm:p-8">
+        <div className="relative border border-black/10 bg-black/[0.03] p-6 sm:p-8">
           <Quote className="absolute right-6 top-6 h-8 w-8 text-black/10" />
           <p className="italic text-base sm:text-xl font-serif text-black/90 leading-relaxed">
             "{story.quote}"
@@ -108,7 +108,7 @@ export default async function StoryDetailPage({
         </div>
 
         {/* IITK EXPERIENCE */}
-        <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6 space-y-3">
+        <div className="border border-black/10 bg-black/[0.02] p-6 space-y-3">
           <div className="flex items-center gap-2">
             <GraduationCap className="h-5 w-5 text-black" />
             <h3 className="font-bold text-base text-black">The IIT Kanpur Finale Experience</h3>
@@ -125,7 +125,7 @@ export default async function StoryDetailPage({
             {story.keyTakeaways.map((tip, idx) => (
               <div
                 key={idx}
-                className="rounded-xl border border-black/10 bg-white p-4 shadow-sm space-y-2"
+                className="border border-black/10 bg-white p-4 shadow-sm space-y-2"
               >
                 <span className="font-mono text-xs font-bold text-black/40">Tip #0{idx + 1}</span>
                 <p className="text-xs text-black/85 leading-relaxed font-medium">{tip}</p>
@@ -143,11 +143,11 @@ export default async function StoryDetailPage({
             <Link
               key={s.slug}
               href={`/stories/${s.slug}`}
-              className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-md transition-all hover:bg-white/15 block space-y-3"
+              className="border border-white/20 bg-white/10 p-6 backdrop-blur-md transition-all hover:bg-white/15 block space-y-3"
             >
               <div className="flex items-center justify-between">
                 <h4 className="font-bold text-lg text-white">{s.name}</h4>
-                <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-xs text-white">
+                <span className="bg-white/20 px-2.5 py-0.5 text-xs text-white">
                   {s.rank}
                 </span>
               </div>

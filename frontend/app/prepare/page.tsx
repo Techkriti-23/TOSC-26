@@ -64,7 +64,7 @@ export default function PreparePage() {
 
       {/* SYLLABUS TOPICS OVERVIEW */}
       <section className="mt-20">
-        <div className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12">
+        <div className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-black/60">
             Syllabus Framework
           </p>
@@ -76,8 +76,8 @@ export default function PreparePage() {
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-black/10 bg-white p-6 space-y-3 shadow-sm">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-black text-white">
+            <div className="border border-black/10 bg-white p-6 space-y-3 shadow-sm">
+              <div className="flex h-9 w-9 items-center justify-center bg-black text-white">
                 <BrainCircuit className="h-4 w-4" />
               </div>
               <h3 className="font-bold text-lg">Mental Ability & Logic</h3>
@@ -89,8 +89,8 @@ export default function PreparePage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-white p-6 space-y-3 shadow-sm">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-black text-white">
+            <div className="border border-black/10 bg-white p-6 space-y-3 shadow-sm">
+              <div className="flex h-9 w-9 items-center justify-center bg-black text-white">
                 <Compass className="h-4 w-4" />
               </div>
               <h3 className="font-bold text-lg">Mathematical Modeling</h3>
@@ -102,8 +102,8 @@ export default function PreparePage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-white p-6 space-y-3 shadow-sm">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-black text-white">
+            <div className="border border-black/10 bg-white p-6 space-y-3 shadow-sm">
+              <div className="flex h-9 w-9 items-center justify-center bg-black text-white">
                 <Lightbulb className="h-4 w-4" />
               </div>
               <h3 className="font-bold text-lg">Integrated Sciences</h3>
@@ -129,9 +129,9 @@ export default function PreparePage() {
           </h2>
         </div>
 
-        <div className="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-xl md:p-12 space-y-6">
+        <div className="border border-white/20 bg-white/10 p-8 backdrop-blur-xl md:p-12 space-y-6">
           <div className="flex items-center justify-between border-b border-white/10 pb-4">
-            <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/90">
+            <span className="bg-white/10 px-3 py-1 text-xs font-semibold text-white/90">
               {sampleQuestion.subject}
             </span>
             <span className="text-xs font-mono text-white/60">+4 / -1 Scheme</span>
@@ -152,7 +152,7 @@ export default function PreparePage() {
                     setSelectedOption(idx);
                     setShowExplanation(false);
                   }}
-                  className={`flex items-center justify-between rounded-xl border p-4 text-left text-sm font-medium transition-all cursor-pointer ${
+                  className={`flex items-center justify-between border p-4 text-left text-sm font-medium transition-all cursor-pointer ${
                     isSelected
                       ? "border-white bg-white text-black shadow-lg"
                       : "border-white/15 bg-black/40 text-white/90 hover:bg-white/10"
@@ -181,7 +181,7 @@ export default function PreparePage() {
           </div>
 
           {showExplanation && (
-            <div className={`rounded-2xl border p-6 backdrop-blur-md ${
+            <div className={`border p-6 backdrop-blur-md ${
               selectedOption === sampleQuestion.correctIdx
                 ? "border-emerald-500/40 bg-emerald-950/40 text-white"
                 : "border-amber-500/40 bg-amber-950/40 text-white"
@@ -209,7 +209,7 @@ export default function PreparePage() {
 
       {/* STRATEGY & TIPS */}
       <section className="mt-24">
-        <div className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12">
+        <div className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-black/60">
             Preparation Playbook
           </p>
@@ -218,28 +218,28 @@ export default function PreparePage() {
           </h2>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
-            <div className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 space-y-2">
+            <div className="border border-black/10 bg-black/[0.03] p-6 space-y-2">
               <h3 className="font-bold text-base text-black">1. Master Boundary Values & Intuition</h3>
               <p className="text-xs text-black/75 leading-relaxed">
                 Many complex problems can be simplified by testing extreme cases (e.g. radius approaches 0 or infinity) to instantly eliminate absurd options.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 space-y-2">
+            <div className="border border-black/10 bg-black/[0.03] p-6 space-y-2">
               <h3 className="font-bold text-base text-black">2. Practice Time Discipline (90 Mins)</h3>
               <p className="text-xs text-black/75 leading-relaxed">
                 With 60 questions in 90 minutes, you have roughly 1.5 minutes per question. If a problem takes more than 2 minutes on first pass, flag it and move forward.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 space-y-2">
+            <div className="border border-black/10 bg-black/[0.03] p-6 space-y-2">
               <h3 className="font-bold text-base text-black">3. Avoid Random Guessing (-1 Penalty)</h3>
               <p className="text-xs text-black/75 leading-relaxed">
                 The negative marking penalizes wild guesses. Only make calculated guesses if you have logically eliminated at least two choices.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 space-y-2">
+            <div className="border border-black/10 bg-black/[0.03] p-6 space-y-2">
               <h3 className="font-bold text-base text-black">4. Solve Previous Year Question Papers</h3>
               <p className="text-xs text-black/75 leading-relaxed">
                 Familiarize yourself with the question syntax, diagram formats, and question patterns set by the IIT Kanpur academic committee.

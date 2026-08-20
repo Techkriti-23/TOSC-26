@@ -16,6 +16,7 @@ import {
   ArrowRight,
   ShieldCheck,
   CheckCircle2,
+  Trophy,
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -38,7 +39,7 @@ export default function AboutPage() {
 
       {/* MISSION & VISION */}
       <section className="mt-20">
-        <div className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-14">
+        <div className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-14">
           <div className="grid gap-10 md:grid-cols-2">
             <div className="space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-black/60">
@@ -71,7 +72,7 @@ export default function AboutPage() {
 
           <div className="mt-12 grid gap-6 border-t border-black/10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
                 <Atom className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg">First-Principles Logic</h3>
@@ -87,7 +88,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
                 <Building2 className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg">IIT Kanpur Immersion</h3>
@@ -95,7 +96,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
                 <GraduationCap className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg">Lifelong Mentorship</h3>
@@ -160,7 +161,7 @@ export default function AboutPage() {
 
       {/* WHAT HAPPENS AT FINALS */}
       <section className="mt-24">
-        <div className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-14">
+        <div className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-14">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-black/60">
             Grand Finale at IIT Kanpur
           </p>
@@ -172,7 +173,7 @@ export default function AboutPage() {
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
-            <div className="rounded-2xl border border-black/10 bg-black/[0.04] p-6 space-y-3">
+            <div className="border border-black/10 bg-black/[0.04] p-6 space-y-3">
               <div className="font-mono text-xs font-bold text-black/50">01</div>
               <h3 className="font-bold text-lg">Aeromodelling & Flight Lab</h3>
               <p className="text-xs text-black/70 leading-relaxed">
@@ -180,7 +181,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-black/[0.04] p-6 space-y-3">
+            <div className="border border-black/10 bg-black/[0.04] p-6 space-y-3">
               <div className="font-mono text-xs font-bold text-black/50">02</div>
               <h3 className="font-bold text-lg">Keynotes & Tech Exhibitions</h3>
               <p className="text-xs text-black/70 leading-relaxed">
@@ -188,7 +189,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-black/[0.04] p-6 space-y-3">
+            <div className="border border-black/10 bg-black/[0.04] p-6 space-y-3">
               <div className="font-mono text-xs font-bold text-black/50">03</div>
               <h3 className="font-bold text-lg">Live Buzzer & Demo Rounds</h3>
               <p className="text-xs text-black/70 leading-relaxed">
