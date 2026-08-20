@@ -81,7 +81,7 @@ export default function AboutPage() {
 
             <div className="space-y-2">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white">
-               
+                <Trophy className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg">National Benchmarking</h3>
               <p className="text-xs text-black/70 leading-relaxed">Detailed percentile and skill-map report across 50,000+ national peers.</p>
