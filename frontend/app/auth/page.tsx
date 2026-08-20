@@ -7,7 +7,7 @@ import { PageShell } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Sparkles,
+ 
   Lock,
   User,
   Mail,
@@ -73,12 +73,7 @@ function AuthContent() {
     <div className="mx-auto max-w-xl py-6">
       {/* BRANDING HEADER */}
       <div className="text-center space-y-3 mb-8">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
-          <Sparkles className="h-4 w-4 text-yellow-300" />
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
-            Secure Portal
-          </span>
-        </div>
+        
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
           TOSC '26 Candidate Access
         </h1>

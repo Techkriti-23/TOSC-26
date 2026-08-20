@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   User,
-  Sparkles,
+ 
   PlayCircle,
   FileText,
   Download,
@@ -110,7 +110,7 @@ export default function DashboardPage() {
 
           <div className="space-y-2.5 pt-1">
             <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-black/30 p-3 text-xs">
-              <Sparkles className="h-4 w-4 text-yellow-300 shrink-0 mt-0.5" />
+             
               <div>
                 <span className="font-bold text-white">Official Mock Test 1 is now LIVE: </span>
                 <span className="text-white/80">

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXAM_POOLS, EXAM_STAGES, EXAM_SCHEDULE, EXAM_RULES } from "@/data/exam";
 import {
-  Sparkles,
+
   Clock,
   HelpCircle,
   Award,
@@ -27,12 +27,7 @@ export default function ExamPage() {
     <PageShell>
       {/* HEADER HERO */}
       <section className="space-y-6 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
-          <Sparkles className="h-4 w-4 text-yellow-300" />
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
-            Structure & Guidelines
-          </span>
-        </div>
+      
 
         <h1 className="text-5xl font-bold tracking-tight sm:text-7xl md:text-8xl">
           The Examination Blueprint.
@@ -129,11 +124,10 @@ export default function ExamPage() {
                 key={pool.id}
                 type="button"
                 onClick={() => setSelectedPoolId(pool.id)}
-                className={`rounded-xl px-5 py-3 text-sm font-semibold transition-all cursor-pointer ${
-                  isSelected
+                className={`rounded-xl px-5 py-3 text-sm font-semibold transition-all cursor-pointer ${isSelected
                     ? "bg-white text-black shadow-lg shadow-white/10"
                     : "border border-white/20 bg-black/40 text-white/70 hover:bg-white/10 hover:text-white"
-                }`}
+                  }`}
               >
                 {pool.name} ({pool.classes})
               </button>

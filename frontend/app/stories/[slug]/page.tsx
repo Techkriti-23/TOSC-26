@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button";
 import { STUDENT_STORIES } from "@/data/stories";
 import {
   ArrowLeft,
-  Trophy,
+
   Quote,
   Building,
   MapPin,
   CheckCircle2,
-  Sparkles,
+ 
   ArrowRight,
   GraduationCap,
 } from "lucide-react";
@@ -62,7 +62,7 @@ export default async function StoryDetailPage({
             </div>
             <div>
               <div className="inline-flex items-center gap-1.5 rounded-full bg-black px-3 py-1 text-xs font-bold text-white mb-2">
-                <Trophy className="h-3.5 w-3.5 text-yellow-400" /> {story.rank} • TOSC {story.year}
+                {story.rank} • TOSC {story.year}
               </div>
               <h1 className="text-3xl font-bold sm:text-4xl text-black">{story.name}</h1>
               <p className="text-xs font-medium text-black/70 mt-0.5">{story.pool}</p>

@@ -5,8 +5,8 @@ import { PageShell } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Sparkles,
-  Trophy,
+
+ 
   Compass,
   Rocket,
   Atom,
@@ -23,12 +23,7 @@ export default function AboutPage() {
     <PageShell>
       {/* HERO BANNER */}
       <section className="space-y-6 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
-          <Sparkles className="h-4 w-4 text-yellow-300" />
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
-            About The Championship
-          </span>
-        </div>
+       
 
         <h1 className="text-5xl font-bold tracking-tight sm:text-7xl md:text-8xl">
           Fostering The Next Generation of Thinkers.
@@ -85,7 +80,7 @@ export default function AboutPage() {
 
             <div className="space-y-2">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white">
-                <Trophy className="h-5 w-5" />
+               
               </div>
               <h3 className="font-bold text-lg">National Benchmarking</h3>
               <p className="text-xs text-black/70 leading-relaxed">Detailed percentile and skill-map report across 50,000+ national peers.</p>

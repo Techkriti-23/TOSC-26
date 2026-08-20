@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { User, Menu, X, ArrowRight, Sparkles } from "lucide-react";
+import { User, Menu, X, ArrowRight, } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -35,9 +35,7 @@ export function Navbar() {
           className="group flex items-center gap-2 text-2xl font-bold tracking-tight text-white transition-opacity hover:opacity-90"
         >
           <span>TOSC<span className="font-light text-white/80">'26</span></span>
-          <span className="hidden rounded-full border border-white/20 bg-white/10 px-2 py-0.5 text-[10px] font-semibold tracking-wider text-white/90 uppercase sm:inline-block">
-            IIT Kanpur
-          </span>
+
         </Link>
 
         {/* Desktop Navigation */}
@@ -48,11 +46,10 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative flex h-10 items-center px-3.5 text-sm font-medium transition-colors ${
-                  isActive
-                    ? "text-white"
-                    : "text-white/70 hover:text-white"
-                }`}
+                className={`relative flex h-10 items-center px-3.5 text-sm font-medium transition-colors ${isActive
+                  ? "text-white"
+                  : "text-white/70 hover:text-white"
+                  }`}
               >
                 {link.label}
                 {isActive && (
@@ -89,23 +86,42 @@ export function Navbar() {
               align="end"
               className="min-w-44 rounded-xl border border-white/20 bg-black/90 p-1.5 text-white backdrop-blur-xl shadow-2xl"
             >
-              <DropdownMenuItem className="cursor-pointer focus:bg-white/15 focus:text-white">
-                <Link href="/auth" className="flex w-full items-center justify-between text-xs py-1">
+              <DropdownMenuItem
+                asChild
+                className="cursor-pointer rounded-lg text-white hover:bg-white/15 focus:bg-white/15 focus:text-white focus:[&_*]:text-white"
+              >
+                <Link
+                  href="/auth"
+                  className="flex w-full items-center justify-between px-2 py-2 text-xs"
+                >
                   <span>Student Login</span>
-                  <ArrowRight className="h-3 w-3 opacity-60" />
+                  <ArrowRight className="h-3 w-3 text-white/60" />
                 </Link>
               </DropdownMenuItem>
 
-              <DropdownMenuItem className="cursor-pointer focus:bg-white/15 focus:text-white">
-                <Link href="/auth?tab=register" className="flex w-full items-center justify-between text-xs py-1">
+              <DropdownMenuItem
+                asChild
+                className="cursor-pointer rounded-lg text-white hover:bg-white/15 focus:bg-white/15 focus:text-white focus:[&_*]:text-white"
+              >
+                <Link
+                  href="/auth?tab=register"
+                  className="flex w-full items-center justify-between px-2 py-2 text-xs"
+                >
                   <span>Register for TOSC</span>
-                  <Sparkles className="h-3 w-3 text-yellow-400" />
+                  <ArrowRight className="h-3 w-3 text-white/60" />
                 </Link>
               </DropdownMenuItem>
 
-              <DropdownMenuItem className="cursor-pointer focus:bg-white/15 focus:text-white">
-                <Link href="/dashboard" className="flex w-full items-center justify-between text-xs py-1">
+              <DropdownMenuItem
+                asChild
+                className="cursor-pointer rounded-lg text-white hover:bg-white/15 focus:bg-white/15 focus:text-white focus:[&_*]:text-white"
+              >
+                <Link
+                  href="/dashboard"
+                  className="flex w-full items-center justify-between px-2 py-2 text-xs"
+                >
                   <span>Student Portal</span>
+                  <ArrowRight className="h-3 w-3 text-white/60" />
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -134,11 +150,10 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-                    isActive
-                      ? "bg-white/20 text-white"
-                      : "text-white/80 hover:bg-white/10 hover:text-white"
-                  }`}
+                  className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isActive
+                    ? "bg-white/20 text-white"
+                    : "text-white/80 hover:bg-white/10 hover:text-white"
+                    }`}
                 >
                   <span>{link.label}</span>
                   {isActive && <span className="h-1.5 w-1.5 rounded-full bg-white" />}

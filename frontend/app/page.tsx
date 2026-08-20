@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Sparkles, Brain, Lightbulb, Compass, Award, CheckCircle2, ChevronRight } from "lucide-react";
+import { ArrowRight, Brain, Lightbulb, Compass, Award, CheckCircle2, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -14,7 +14,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-black text-white selection:bg-white selection:text-black">
+    <div className="relative min-h-screen text-white selection:bg-white selection:text-black">
       {/* FIXED BACKGROUND VIDEO */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <video
@@ -38,12 +38,7 @@ export default function Home() {
         {/* HERO SECTION */}
         <section className="relative flex min-h-screen flex-col items-center justify-center px-6 pt-24 text-center">
           <div className="mx-auto max-w-4xl space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
-              <Sparkles className="h-4 w-4 text-yellow-300" />
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
-                Techkriti '26 • IIT Kanpur
-              </span>
-            </div>
+         
 
             <h1 className="text-6xl font-bold tracking-tight sm:text-8xl md:text-9xl">
               TOSC<span className="font-normal text-white/80">'26</span>
@@ -75,7 +70,7 @@ export default function Home() {
             {/* Quick Metrics Bar */}
             <div className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-4 rounded-2xl border border-white/15 bg-black/40 p-5 backdrop-blur-md sm:grid-cols-4">
               <div>
-                <p className="text-2xl font-bold text-white sm:text-3xl">100K+</p>
+                <p className="text-2xl font-bold text-white sm:text-3xl">10K+</p>
                 <p className="text-xs text-white/60 uppercase tracking-wider">Students</p>
               </div>
               <div>
