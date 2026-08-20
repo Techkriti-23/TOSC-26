@@ -40,7 +40,7 @@ export default function FAQPage() {
     <PageShell>
       {/* HEADER HERO */}
       <section className="space-y-6 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 rounded-none border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
           <HelpCircle className="h-4 w-4 text-yellow-300" />
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
             Helpdesk & Clarifications
@@ -65,7 +65,7 @@ export default function FAQPage() {
               placeholder="Search by keyword (e.g. syllabus, IIT Kanpur, eligibility, fees)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="h-13 rounded-2xl border-white/20 bg-white/10 pl-12 pr-4 text-sm text-white placeholder:text-white/40 backdrop-blur-md focus:border-white focus:bg-white/15"
+              className="h-13 rounded-none border-white/20 bg-white/10 pl-12 pr-4 text-sm text-white placeholder:text-white/40 backdrop-blur-md focus:border-white focus:bg-white/15"
             />
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function FAQPage() {
               key={cat.id}
               type="button"
               onClick={() => setActiveCategory(cat.id)}
-              className={`rounded-xl px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`rounded-none px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                 activeCategory === cat.id
                   ? "bg-white text-black shadow-lg"
                   : "border border-white/15 bg-black/40 text-white/70 hover:bg-white/10 hover:text-white"
@@ -98,7 +98,7 @@ export default function FAQPage() {
         </div>
 
         {/* FAQS ACCORDION CONTAINER */}
-        <div className="mt-10 rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12">
+        <div className="mt-10 rounded-none border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12">
           {filteredFaqs.length === 0 ? (
             <div className="py-12 text-center space-y-3">
               <p className="text-lg font-bold text-black">No matching questions found</p>
@@ -109,7 +109,7 @@ export default function FAQPage() {
                   setSearchQuery("");
                   setActiveCategory("all");
                 }}
-                className="bg-black text-white hover:bg-black/90"
+                className="rounded-none bg-black text-white hover:bg-black/90"
               >
                 Reset Filters
               </Button>
@@ -120,9 +120,9 @@ export default function FAQPage() {
                 <AccordionItem
                   key={faq.id}
                   value={faq.id}
-                  className="rounded-2xl border border-black/10 bg-white px-6 py-1 shadow-sm transition-all"
+                  className="rounded-none border border-black/10 bg-white px-6 py-1 shadow-sm transition-all"
                 >
-                  <AccordionTrigger className="text-left font-bold text-base text-black hover:no-underline py-5">
+                  <AccordionTrigger className="rounded-none text-left font-bold text-base text-black hover:no-underline py-5">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-xs sm:text-sm text-black/80 leading-relaxed pb-6 pt-1">
@@ -150,7 +150,7 @@ export default function FAQPage() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-3">
-          <div className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-md space-y-3 text-center">
+          <div className="rounded-none border border-white/20 bg-white/10 p-6 backdrop-blur-md space-y-3 text-center">
             <Mail className="mx-auto h-7 w-7 text-yellow-300" />
             <h3 className="font-bold text-base text-white">Email Helpdesk</h3>
             <p className="text-xs text-white/70">For general queries, eligibility checks, and portal assistance.</p>
@@ -162,14 +162,14 @@ export default function FAQPage() {
             </a>
           </div>
 
-          <div className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-md space-y-3 text-center">
+          <div className="rounded-none border border-white/20 bg-white/10 p-6 backdrop-blur-md space-y-3 text-center">
             <Phone className="mx-auto h-7 w-7 text-indigo-300" />
             <h3 className="font-bold text-base text-white">Direct Phone Support</h3>
             <p className="text-xs text-white/70">Monday to Saturday: 10:00 AM to 7:00 PM IST.</p>
             <p className="font-mono text-xs font-bold text-white">+91 512 259 7767</p>
           </div>
 
-          <div className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-md space-y-3 text-center">
+          <div className="rounded-none border border-white/20 bg-white/10 p-6 backdrop-blur-md space-y-3 text-center">
             <MapPin className="mx-auto h-7 w-7 text-emerald-300" />
             <h3 className="font-bold text-base text-white">IIT Kanpur Office</h3>
             <p className="text-xs text-white/70">Techkriti Secretariat, Students' Activity Centre, IIT Kanpur, UP - 208016.</p>

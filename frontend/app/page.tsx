@@ -38,7 +38,7 @@ export default function Home() {
         {/* HERO SECTION */}
         <section className="relative flex min-h-screen flex-col items-center justify-center px-6 pt-24 text-center">
           <div className="mx-auto max-w-4xl space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
               <Sparkles className="h-4 w-4 text-yellow-300" />
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
                 Techkriti '26 • IIT Kanpur
@@ -73,7 +73,7 @@ export default function Home() {
             </div>
 
             {/* Quick Metrics Bar */}
-            <div className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-4 rounded-2xl border border-white/15 bg-black/40 p-5 backdrop-blur-md sm:grid-cols-4">
+            <div className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-4 border border-white/15 bg-black/40 p-5 backdrop-blur-md sm:grid-cols-4">
               <div>
                 <p className="text-2xl font-bold text-white sm:text-3xl">100K+</p>
                 <p className="text-xs text-white/60 uppercase tracking-wider">Students</p>
@@ -97,7 +97,7 @@ export default function Home() {
         {/* ABOUT SECTION */}
         <section className="relative px-6 py-28 md:py-36">
           <div className="mx-auto max-w-6xl">
-            <div className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-16">
+            <div className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-16">
               <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-black/60">
@@ -196,7 +196,7 @@ export default function Home() {
         {/* WHO CAN PARTICIPATE */}
         <section className="relative px-6 py-24">
           <div className="mx-auto max-w-6xl">
-            <div className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-16">
+            <div className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-16">
               <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-black/60">
@@ -212,8 +212,8 @@ export default function Home() {
               </div>
 
               <div className="mt-12 grid gap-6 sm:grid-cols-3">
-                <div className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 space-y-3">
-                  <div className="inline-flex rounded-full bg-black text-white px-3 py-1 text-xs font-semibold">
+                <div className="border border-black/10 bg-black/[0.03] p-6 space-y-3">
+                  <div className="inline-flex bg-black text-white px-3 py-1 text-xs font-semibold">
                     Junior Pool
                   </div>
                   <h3 className="text-xl font-bold text-black">Classes 6, 7 & 8</h3>
@@ -225,8 +225,8 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 space-y-3">
-                  <div className="inline-flex rounded-full bg-black text-white px-3 py-1 text-xs font-semibold">
+                <div className="border border-black/10 bg-black/[0.03] p-6 space-y-3">
+                  <div className="inline-flex bg-black text-white px-3 py-1 text-xs font-semibold">
                     Senior Pool
                   </div>
                   <h3 className="text-xl font-bold text-black">Classes 9 & 10</h3>
@@ -238,8 +238,8 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 space-y-3">
-                  <div className="inline-flex rounded-full bg-black text-white px-3 py-1 text-xs font-semibold">
+                <div className="border border-black/10 bg-black/[0.03] p-6 space-y-3">
+                  <div className="inline-flex bg-black text-white px-3 py-1 text-xs font-semibold">
                     Super Senior Pool
                   </div>
                   <h3 className="text-xl font-bold text-black">Classes 11 & 12</h3>

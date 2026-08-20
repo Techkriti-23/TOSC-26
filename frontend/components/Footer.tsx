@@ -21,10 +21,10 @@ export function Footer() {
             </p>
 
             <div className="flex items-center gap-3 pt-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/80">
+              <span className="inline-flex items-center gap-1.5 border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/80">
                 <Sparkles className="h-3 w-3 text-yellow-400" /> IIT Kanpur Initiative
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/80">
+              <span className="inline-flex items-center gap-1.5 border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/80">
                 <Trophy className="h-3 w-3 text-amber-300" /> ₹5,00,000+ Prizes
               </span>
             </div>

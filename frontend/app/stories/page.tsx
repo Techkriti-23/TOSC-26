@@ -8,7 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { STUDENT_STORIES } from "@/data/stories";
 import {
   Sparkles,
-  Trophy,
   Quote,
   ArrowRight,
   GraduationCap,
@@ -30,12 +29,6 @@ export default function StoriesPage() {
     <PageShell>
       {/* HEADER HERO */}
       <section className="space-y-6 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
-          <Trophy className="h-4 w-4 text-yellow-300" />
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
-            Hall of Achievers
-          </span>
-        </div>
 
         <h1 className="text-5xl font-bold tracking-tight sm:text-7xl md:text-8xl">
           Inspiring Journeys to IIT Kanpur.
@@ -60,7 +53,7 @@ export default function StoriesPage() {
               key={tab.id}
               type="button"
               onClick={() => setFilterPool(tab.id)}
-              className={`rounded-xl px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                 filterPool === tab.id
                   ? "bg-white text-black shadow-lg"
                   : "border border-white/20 bg-black/40 text-white/70 hover:bg-white/10 hover:text-white"
@@ -76,12 +69,12 @@ export default function StoriesPage() {
           {filteredStories.map((story) => (
             <div
               key={story.slug}
-              className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-10 space-y-6 flex flex-col justify-between transition-transform hover:-translate-y-1"
+              className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-10 space-y-6 flex flex-col justify-between transition-transform hover:-translate-y-1"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-black font-bold text-white text-sm">
+                    <div className="flex h-12 w-12 items-center justify-center bg-black font-bold text-white text-sm">
                       {story.avatar}
                     </div>
                     <div>
@@ -90,9 +83,9 @@ export default function StoriesPage() {
                     </div>
                   </div>
 
-                  <div className="rounded-full bg-black px-3 py-1 text-xs font-bold text-white">
-                    {story.rank} • {story.year}
-                  </div>
+                  <span className="text-xs font-bold text-black">
+                    {story.rank}
+                  </span>
                 </div>
 
                 <div className="space-y-1 text-xs text-black/65 border-t border-black/10 pt-3">
@@ -104,7 +97,7 @@ export default function StoriesPage() {
                   </p>
                 </div>
 
-                <div className="relative rounded-2xl border border-black/10 bg-black/[0.03] p-5">
+                <div className="relative border border-black/10 bg-black/[0.03] p-5">
                   <Quote className="absolute right-4 top-4 h-6 w-6 text-black/10" />
                   <p className="italic text-xs sm:text-sm text-black/85 leading-relaxed">
                     "{story.quote}"
@@ -133,7 +126,7 @@ export default function StoriesPage() {
 
       {/* TEACHER & PRINCIPAL REVIEWS */}
       <section className="mt-24">
-        <div className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12">
+        <div className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-12">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-black/60">
             Educator Endorsements
           </p>
@@ -142,7 +135,7 @@ export default function StoriesPage() {
           </h2>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
-            <div className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 space-y-3">
+            <div className="border border-black/10 bg-black/[0.03] p-6 space-y-3">
               <div className="flex gap-1 text-amber-500">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-amber-500" />
@@ -157,7 +150,7 @@ export default function StoriesPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 space-y-3">
+            <div className="border border-black/10 bg-black/[0.03] p-6 space-y-3">
               <div className="flex gap-1 text-amber-500">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-amber-500" />

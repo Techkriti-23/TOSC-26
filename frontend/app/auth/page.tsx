@@ -73,7 +73,7 @@ function AuthContent() {
     <div className="mx-auto max-w-xl py-6">
       {/* BRANDING HEADER */}
       <div className="text-center space-y-3 mb-8">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
           <Sparkles className="h-4 w-4 text-yellow-300" />
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
             Secure Portal
@@ -88,14 +88,14 @@ function AuthContent() {
       </div>
 
       {/* TAB SELECTOR */}
-      <div className="grid grid-cols-3 gap-2 rounded-2xl border border-white/20 bg-black/40 p-1.5 backdrop-blur-xl mb-8">
+      <div className="grid grid-cols-3 gap-2 border border-white/20 bg-black/40 p-1.5 backdrop-blur-xl mb-8">
         <button
           type="button"
           onClick={() => {
             setActiveTab("login");
             setSuccessMessage(null);
           }}
-          className={`rounded-xl py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+          className={`py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
             activeTab === "login"
               ? "bg-white text-black shadow-lg"
               : "text-white/70 hover:text-white"
@@ -110,7 +110,7 @@ function AuthContent() {
             setActiveTab("register");
             setSuccessMessage(null);
           }}
-          className={`rounded-xl py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+          className={`py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
             activeTab === "register"
               ? "bg-white text-black shadow-lg"
               : "text-white/70 hover:text-white"
@@ -125,7 +125,7 @@ function AuthContent() {
             setActiveTab("coordinator");
             setSuccessMessage(null);
           }}
-          className={`rounded-xl py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+          className={`py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
             activeTab === "coordinator"
               ? "bg-white text-black shadow-lg"
               : "text-white/70 hover:text-white"
@@ -136,9 +136,9 @@ function AuthContent() {
       </div>
 
       {/* CARD CONTAINER */}
-      <div className="rounded-3xl border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-10">
+      <div className="border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:p-10">
         {successMessage && (
-          <div className="mb-6 flex items-center gap-2 rounded-xl border border-emerald-500 bg-emerald-50 p-4 text-xs font-semibold text-emerald-900">
+          <div className="mb-6 flex items-center gap-2 border border-emerald-500 bg-emerald-50 p-4 text-xs font-semibold text-emerald-900">
             <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
             <span>{successMessage}</span>
           </div>
@@ -244,7 +244,7 @@ function AuthContent() {
                 <select
                   value={regForm.pool}
                   onChange={(e) => setRegForm({ ...regForm, pool: e.target.value })}
-                  className="h-11 w-full rounded-md border border-black/20 bg-white px-3 text-xs font-medium text-black outline-none"
+                  className="h-11 w-full border border-black/20 bg-white px-3 text-xs font-medium text-black outline-none"
                 >
                   <option value="junior">Junior Pool (Classes 6-8)</option>
                   <option value="senior">Senior Pool (Classes 9-10)</option>
