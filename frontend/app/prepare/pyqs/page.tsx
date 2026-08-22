@@ -69,7 +69,7 @@ export default function PYQsPage() {
               key={tab.id}
               type="button"
               onClick={() => setSelectedPool(tab.id as any)}
-              className={`rounded-xl px-5 py-3 text-sm font-semibold transition-all cursor-pointer ${
+              className={`rounded-[4px] px-5 py-3 text-sm font-semibold transition-all cursor-pointer ${
                 selectedPool === tab.id
                   ? "bg-white text-black shadow-lg"
                   : "border border-white/20 bg-black/40 text-white/70 hover:bg-white/10 hover:text-white"

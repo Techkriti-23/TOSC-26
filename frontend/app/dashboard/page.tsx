@@ -41,12 +41,12 @@ export default function DashboardPage() {
       <section className="space-y-6">
         <div className="flex flex-col gap-6 border border-white/20 bg-white/90 p-8 text-black shadow-2xl backdrop-blur-xl md:flex-row md:items-center md:justify-between md:p-10">
           <div className="flex items-center gap-5">
-            <div className="flex h-16 w-16 items-center justify-center bg-black text-white text-xl font-bold shadow-xl">
+            <div className="flex h-16 w-16 items-center justify-center rounded-[4px] bg-black text-white text-xl font-bold shadow-xl">
               AS
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="bg-emerald-600 px-2.5 py-0.5 text-[10px] font-bold text-white uppercase tracking-wider">
+                <span className="rounded-[4px] bg-emerald-600 px-2.5 py-0.5 text-[10px] font-bold text-white uppercase tracking-wider">
                   {candidate.status}
                 </span>
                 <span className="font-mono text-xs text-black/50">ID: {candidate.rollNumber}</span>
@@ -109,7 +109,7 @@ export default function DashboardPage() {
           </div>
 
           <div className="space-y-2.5 pt-1">
-            <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-black/30 p-3 text-xs">
+            <div className="flex items-start gap-3 rounded-[4px] border border-white/10 bg-black/30 p-3 text-xs">
              
               <div>
                 <span className="font-bold text-white">Official Mock Test 1 is now LIVE: </span>
@@ -139,7 +139,7 @@ export default function DashboardPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <div className="border border-white/20 bg-white/90 p-6 text-black shadow-xl backdrop-blur-md space-y-4 flex flex-col justify-between transition-transform hover:-translate-y-1">
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[4px] bg-black text-white">
                 <PlayCircle className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg text-black">Take Mock Test</h3>
@@ -158,7 +158,7 @@ export default function DashboardPage() {
 
           <div className="border border-white/20 bg-white/90 p-6 text-black shadow-xl backdrop-blur-md space-y-4 flex flex-col justify-between transition-transform hover:-translate-y-1">
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[4px] bg-black text-white">
                 <FileText className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg text-black">PYQ Question Bank</h3>
@@ -175,7 +175,7 @@ export default function DashboardPage() {
 
           <div className="border border-white/20 bg-white/90 p-6 text-black shadow-xl backdrop-blur-md space-y-4 flex flex-col justify-between transition-transform hover:-translate-y-1">
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[4px] bg-black text-white">
                 <Award className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg text-black">My Diagnostic Score</h3>
@@ -192,7 +192,7 @@ export default function DashboardPage() {
 
           <div className="border border-white/20 bg-white/90 p-6 text-black shadow-xl backdrop-blur-md space-y-4 flex flex-col justify-between transition-transform hover:-translate-y-1">
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[4px] bg-black text-white">
                 <ShieldCheck className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg text-black">Exam Guidelines</h3>

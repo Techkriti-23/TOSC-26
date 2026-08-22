@@ -19,6 +19,12 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+const POOL_CLASS_OPTIONS: Record<string, string[]> = {
+  junior: ["Class 6", "Class 7", "Class 8"],
+  senior: ["Class 9", "Class 10"],
+  "super-senior": ["Class 11", "Class 12"],
+};
+
 function AuthContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -29,8 +35,8 @@ function AuthContent() {
   );
 
   const [loginForm, setLoginForm] = useState({
-    identifier: "TOSC26-1001",
-    password: "••••••••",
+    identifier: "",
+    password: "",
   });
 
   const [regForm, setRegForm] = useState({
@@ -90,7 +96,7 @@ function AuthContent() {
             setActiveTab("login");
             setSuccessMessage(null);
           }}
-          className={`py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+          className={`rounded-[4px] py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
             activeTab === "login"
               ? "bg-white text-black shadow-lg"
               : "text-white/70 hover:text-white"
@@ -105,7 +111,7 @@ function AuthContent() {
             setActiveTab("register");
             setSuccessMessage(null);
           }}
-          className={`py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+          className={`rounded-[4px] py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
             activeTab === "register"
               ? "bg-white text-black shadow-lg"
               : "text-white/70 hover:text-white"
@@ -120,7 +126,7 @@ function AuthContent() {
             setActiveTab("coordinator");
             setSuccessMessage(null);
           }}
-          className={`py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+          className={`rounded-[4px] py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
             activeTab === "coordinator"
               ? "bg-white text-black shadow-lg"
               : "text-white/70 hover:text-white"
@@ -158,7 +164,7 @@ function AuthContent() {
                   placeholder="e.g. TOSC26-1001 or student@example.com"
                   value={loginForm.identifier}
                   onChange={(e) => setLoginForm({ ...loginForm, identifier: e.target.value })}
-                  className="bg-white text-black border-black/20 pl-10 h-11 text-sm"
+                  className="bg-white text-black border-black/20 pl-10 pr-3.5 h-11 text-sm rounded-[4px]"
                 />
               </div>
             </div>
@@ -184,7 +190,7 @@ function AuthContent() {
                   placeholder="••••••••"
                   value={loginForm.password}
                   onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })}
-                  className="bg-white text-black border-black/20 pl-10 h-11 text-sm"
+                  className="bg-white text-black border-black/20 pl-10 pr-3.5 h-11 text-sm rounded-[4px]"
                 />
               </div>
             </div>
@@ -227,7 +233,7 @@ function AuthContent() {
                 placeholder="e.g. Aarav Sharma"
                 value={regForm.fullName}
                 onChange={(e) => setRegForm({ ...regForm, fullName: e.target.value })}
-                className="bg-white text-black border-black/20 h-11 text-sm"
+                className="bg-white text-black border-black/20 px-3.5 h-11 text-sm rounded-[4px]"
               />
             </div>
 
@@ -238,8 +244,16 @@ function AuthContent() {
                 </label>
                 <select
                   value={regForm.pool}
-                  onChange={(e) => setRegForm({ ...regForm, pool: e.target.value })}
-                  className="h-11 w-full border border-black/20 bg-white px-3 text-xs font-medium text-black outline-none"
+                  onChange={(e) => {
+                    const nextPool = e.target.value;
+                    const available = POOL_CLASS_OPTIONS[nextPool] || [];
+                    setRegForm({
+                      ...regForm,
+                      pool: nextPool,
+                      classGrade: available[0] || "",
+                    });
+                  }}
+                  className="h-11 w-full rounded-[4px] border border-black/20 bg-white px-3.5 text-xs font-medium text-black outline-none focus:border-black cursor-pointer"
                 >
                   <option value="junior">Junior Pool (Classes 6-8)</option>
                   <option value="senior">Senior Pool (Classes 9-10)</option>
@@ -251,13 +265,18 @@ function AuthContent() {
                 <label className="text-xs font-semibold text-black uppercase tracking-wider">
                   Current Grade / Class *
                 </label>
-                <Input
+                <select
                   required
-                  placeholder="e.g. Class 10"
                   value={regForm.classGrade}
                   onChange={(e) => setRegForm({ ...regForm, classGrade: e.target.value })}
-                  className="bg-white text-black border-black/20 h-11 text-sm"
-                />
+                  className="h-11 w-full rounded-[4px] border border-black/20 bg-white px-3.5 text-xs font-medium text-black outline-none focus:border-black cursor-pointer"
+                >
+                  {(POOL_CLASS_OPTIONS[regForm.pool] || []).map((cls) => (
+                    <option key={cls} value={cls}>
+                      {cls}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
 
@@ -270,7 +289,7 @@ function AuthContent() {
                 placeholder="e.g. Delhi Public School, R.K. Puram"
                 value={regForm.schoolName}
                 onChange={(e) => setRegForm({ ...regForm, schoolName: e.target.value })}
-                className="bg-white text-black border-black/20 h-11 text-sm"
+                className="bg-white text-black border-black/20 px-3.5 h-11 text-sm rounded-[4px]"
               />
             </div>
 
@@ -285,7 +304,7 @@ function AuthContent() {
                   placeholder="student@example.com"
                   value={regForm.email}
                   onChange={(e) => setRegForm({ ...regForm, email: e.target.value })}
-                  className="bg-white text-black border-black/20 h-11 text-sm"
+                  className="bg-white text-black border-black/20 px-3.5 h-11 text-sm rounded-[4px]"
                 />
               </div>
 
@@ -298,7 +317,7 @@ function AuthContent() {
                   placeholder="+91 98765 43210"
                   value={regForm.phone}
                   onChange={(e) => setRegForm({ ...regForm, phone: e.target.value })}
-                  className="bg-white text-black border-black/20 h-11 text-sm"
+                  className="bg-white text-black border-black/20 px-3.5 h-11 text-sm rounded-[4px]"
                 />
               </div>
             </div>
@@ -313,7 +332,7 @@ function AuthContent() {
                 placeholder="Minimum 8 characters"
                 value={regForm.password}
                 onChange={(e) => setRegForm({ ...regForm, password: e.target.value })}
-                className="bg-white text-black border-black/20 h-11 text-sm"
+                className="bg-white text-black border-black/20 px-3.5 h-11 text-sm rounded-[4px]"
               />
             </div>
 
@@ -343,7 +362,7 @@ function AuthContent() {
                 required
                 placeholder="e.g. SCH-DEL-1049"
                 defaultValue="SCH-DEL-1049"
-                className="bg-white text-black border-black/20 h-11 text-sm font-mono"
+                className="bg-white text-black border-black/20 px-3.5 h-11 text-sm font-mono rounded-[4px]"
               />
             </div>
 
@@ -355,7 +374,7 @@ function AuthContent() {
                 required
                 type="password"
                 defaultValue="••••••••"
-                className="bg-white text-black border-black/20 h-11 text-sm"
+                className="bg-white text-black border-black/20 px-3.5 h-11 text-sm rounded-[4px]"
               />
             </div>
 

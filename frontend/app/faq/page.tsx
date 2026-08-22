@@ -81,7 +81,7 @@ export default function FAQPage() {
               key={cat.id}
               type="button"
               onClick={() => setActiveCategory(cat.id)}
-              className={`rounded-none px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`rounded-[4px] px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                 activeCategory === cat.id
                   ? "bg-white text-black shadow-lg"
                   : "border border-white/15 bg-black/40 text-white/70 hover:bg-white/10 hover:text-white"
@@ -104,7 +104,7 @@ export default function FAQPage() {
                   setSearchQuery("");
                   setActiveCategory("all");
                 }}
-                className="rounded-none bg-black text-white hover:bg-black/90"
+                className="rounded-[4px] bg-black text-white hover:bg-black/90"
               >
                 Reset Filters
               </Button>

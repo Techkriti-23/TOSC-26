@@ -76,7 +76,7 @@ export function Navbar() {
           {/* User Menu Dropdown */}
           <DropdownMenu>
             <DropdownMenuTrigger
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white outline-none transition-all hover:bg-white/20 focus-visible:ring-2 focus-visible:ring-white/50"
+              className="flex h-9 w-9 items-center justify-center rounded-[4px] border border-white/20 bg-white/10 text-white outline-none transition-all hover:bg-white/20 focus-visible:ring-2 focus-visible:ring-white/50"
               aria-label="User Account"
             >
               <User className="h-4 w-4" />
@@ -84,45 +84,30 @@ export function Navbar() {
 
             <DropdownMenuContent
               align="end"
-              className="min-w-44 rounded-xl border border-white/20 bg-black/90 p-1.5 text-white backdrop-blur-xl shadow-2xl"
+              className="min-w-44 rounded-[4px] border border-white/20 bg-black/90 p-1.5 text-white backdrop-blur-xl shadow-2xl"
             >
               <DropdownMenuItem
-                asChild
-                className="cursor-pointer rounded-lg text-white hover:bg-white/15 focus:bg-white/15 focus:text-white focus:[&_*]:text-white"
+                render={<Link href="/auth" />}
+                className="cursor-pointer rounded-[4px] text-white hover:bg-white/15 focus:bg-white/15 focus:text-white focus:[&_*]:text-white flex w-full items-center justify-between px-2 py-2 text-xs"
               >
-                <Link
-                  href="/auth"
-                  className="flex w-full items-center justify-between px-2 py-2 text-xs"
-                >
-                  <span>Student Login</span>
-                  <ArrowRight className="h-3 w-3 text-white/60" />
-                </Link>
+                <span>Student Login</span>
+                <ArrowRight className="h-3 w-3 text-white/60" />
               </DropdownMenuItem>
 
               <DropdownMenuItem
-                asChild
-                className="cursor-pointer rounded-lg text-white hover:bg-white/15 focus:bg-white/15 focus:text-white focus:[&_*]:text-white"
+                render={<Link href="/auth?tab=register" />}
+                className="cursor-pointer rounded-[4px] text-white hover:bg-white/15 focus:bg-white/15 focus:text-white focus:[&_*]:text-white flex w-full items-center justify-between px-2 py-2 text-xs"
               >
-                <Link
-                  href="/auth?tab=register"
-                  className="flex w-full items-center justify-between px-2 py-2 text-xs"
-                >
-                  <span>Register for TOSC</span>
-                  <ArrowRight className="h-3 w-3 text-white/60" />
-                </Link>
+                <span>Register for TOSC</span>
+                <ArrowRight className="h-3 w-3 text-white/60" />
               </DropdownMenuItem>
 
               <DropdownMenuItem
-                asChild
-                className="cursor-pointer rounded-lg text-white hover:bg-white/15 focus:bg-white/15 focus:text-white focus:[&_*]:text-white"
+                render={<Link href="/dashboard" />}
+                className="cursor-pointer rounded-[4px] text-white hover:bg-white/15 focus:bg-white/15 focus:text-white focus:[&_*]:text-white flex w-full items-center justify-between px-2 py-2 text-xs"
               >
-                <Link
-                  href="/dashboard"
-                  className="flex w-full items-center justify-between px-2 py-2 text-xs"
-                >
-                  <span>Student Portal</span>
-                  <ArrowRight className="h-3 w-3 text-white/60" />
-                </Link>
+                <span>Student Portal</span>
+                <ArrowRight className="h-3 w-3 text-white/60" />
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -131,7 +116,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-white/10 text-white md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-[4px] border border-white/20 bg-white/10 text-white md:hidden"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -150,7 +135,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isActive
+                  className={`flex items-center justify-between rounded-[4px] px-3 py-2 text-sm font-medium transition-colors ${isActive
                     ? "bg-white/20 text-white"
                     : "text-white/80 hover:bg-white/10 hover:text-white"
                     }`}
@@ -165,14 +150,14 @@ export function Navbar() {
               <Link
                 href="/auth"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center rounded-lg border border-white/20 bg-white/10 py-2 text-center text-xs font-semibold text-white"
+                className="flex items-center justify-center rounded-[4px] border border-white/20 bg-white/10 py-2 text-center text-xs font-semibold text-white"
               >
                 Sign In
               </Link>
               <Link
                 href="/auth?tab=register"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center rounded-lg bg-white py-2 text-center text-xs font-semibold text-black"
+                className="flex items-center justify-center rounded-[4px] bg-white py-2 text-center text-xs font-semibold text-black"
               >
                 Register
               </Link>

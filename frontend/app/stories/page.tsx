@@ -55,7 +55,7 @@ export default function StoriesPage() {
               key={tab.id}
               type="button"
               onClick={() => setFilterPool(tab.id)}
-              className={`px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`rounded-[4px] px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                 filterPool === tab.id
                   ? "bg-white text-black shadow-lg"
                   : "border border-white/20 bg-black/40 text-white/70 hover:bg-white/10 hover:text-white"

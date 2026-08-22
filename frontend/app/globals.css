@@ -127,4 +127,12 @@
   html {
     @apply font-sans;
   }
+  button,
+  [role="button"] {
+    border-radius: 4px;
+  }
+  button svg,
+  [role="button"] svg {
+    border-radius: 4px;
+  }
 }

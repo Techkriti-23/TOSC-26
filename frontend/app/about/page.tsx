@@ -72,7 +72,7 @@ export default function AboutPage() {
 
           <div className="mt-12 grid gap-6 border-t border-black/10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[4px] bg-black text-white">
                 <Atom className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg">First-Principles Logic</h3>
@@ -80,7 +80,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[4px] bg-black text-white">
                 <Trophy className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg">National Benchmarking</h3>
@@ -88,7 +88,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[4px] bg-black text-white">
                 <Building2 className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg">IIT Kanpur Immersion</h3>
@@ -96,7 +96,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-2">
-              <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[4px] bg-black text-white">
                 <GraduationCap className="h-5 w-5" />
               </div>
               <h3 className="font-bold text-lg">Lifelong Mentorship</h3>

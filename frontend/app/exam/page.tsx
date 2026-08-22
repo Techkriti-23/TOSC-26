@@ -124,7 +124,7 @@ export default function ExamPage() {
                 key={pool.id}
                 type="button"
                 onClick={() => setSelectedPoolId(pool.id)}
-                className={`px-5 py-3 text-sm font-semibold transition-all cursor-pointer ${
+                className={`rounded-[4px] px-5 py-3 text-sm font-semibold transition-all cursor-pointer ${
                   isSelected
                     ? "bg-white text-black shadow-lg shadow-white/10"
                     : "border border-white/20 bg-black/40 text-white/70 hover:bg-white/10 hover:text-white"

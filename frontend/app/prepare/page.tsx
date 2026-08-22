@@ -152,7 +152,7 @@ export default function PreparePage() {
                     setSelectedOption(idx);
                     setShowExplanation(false);
                   }}
-                  className={`flex items-center justify-between border p-4 text-left text-sm font-medium transition-all cursor-pointer ${
+                  className={`flex items-center justify-between rounded-[4px] border p-4 text-left text-sm font-medium transition-all cursor-pointer ${
                     isSelected
                       ? "border-white bg-white text-black shadow-lg"
                       : "border-white/15 bg-black/40 text-white/90 hover:bg-white/10"

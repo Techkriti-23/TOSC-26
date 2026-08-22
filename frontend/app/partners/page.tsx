@@ -192,7 +192,7 @@ export default function PartnersPage() {
                   onClick={() => setFormSubmitted(false)}
                   variant="outline"
                   size="sm"
-                  className="mt-4 rounded-none border-emerald-600 text-emerald-900 hover:bg-emerald-100"
+                  className="mt-4 rounded-[4px] border-emerald-600 text-emerald-900 hover:bg-emerald-100"
                 >
                   Submit Another Inquiry
                 </Button>
@@ -209,7 +209,7 @@ export default function PartnersPage() {
                       placeholder="e.g. Delhi Public School"
                       value={formData.schoolName}
                       onChange={(e) => setFormData({ ...formData, schoolName: e.target.value })}
-                      className="rounded-none bg-white text-black border-black/20"
+                      className="rounded-[4px] bg-white text-black border-black/20 px-3.5 h-11 text-sm"
                     />
                   </div>
 
@@ -222,7 +222,7 @@ export default function PartnersPage() {
                       placeholder="e.g. Bengaluru, Karnataka"
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                      className="rounded-none bg-white text-black border-black/20"
+                      className="rounded-[4px] bg-white text-black border-black/20 px-3.5 h-11 text-sm"
                     />
                   </div>
                 </div>
@@ -237,7 +237,7 @@ export default function PartnersPage() {
                       placeholder="e.g. Dr. Rajesh Sharma"
                       value={formData.coordinatorName}
                       onChange={(e) => setFormData({ ...formData, coordinatorName: e.target.value })}
-                      className="rounded-none bg-white text-black border-black/20"
+                      className="rounded-[4px] bg-white text-black border-black/20 px-3.5 h-11 text-sm"
                     />
                   </div>
 
@@ -251,7 +251,7 @@ export default function PartnersPage() {
                       placeholder="e.g. tosc@school.edu.in"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="rounded-none bg-white text-black border-black/20"
+                      className="rounded-[4px] bg-white text-black border-black/20 px-3.5 h-11 text-sm"
                     />
                   </div>
                 </div>
@@ -266,7 +266,7 @@ export default function PartnersPage() {
                       placeholder="e.g. +91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="rounded-none bg-white text-black border-black/20"
+                      className="rounded-[4px] bg-white text-black border-black/20 px-3.5 h-11 text-sm"
                     />
                   </div>
 
@@ -278,12 +278,12 @@ export default function PartnersPage() {
                       placeholder="e.g. 200 - 500 students"
                       value={formData.studentCount}
                       onChange={(e) => setFormData({ ...formData, studentCount: e.target.value })}
-                      className="rounded-none bg-white text-black border-black/20"
+                      className="rounded-[4px] bg-white text-black border-black/20 px-3.5 h-11 text-sm"
                     />
                   </div>
                 </div>
 
-                <Button type="submit" className="w-full rounded-none bg-black text-white hover:bg-black/90 py-6 text-sm font-semibold">
+                <Button type="submit" className="w-full rounded-[4px] bg-black text-white hover:bg-black/90 py-6 text-sm font-semibold">
                   <Send className="mr-2 h-4 w-4" /> Submit School Partnership Request
                 </Button>
               </form>

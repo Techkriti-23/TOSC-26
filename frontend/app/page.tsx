@@ -43,6 +43,10 @@ export default function Home() {
             <h1 className="text-6xl font-bold tracking-tight sm:text-8xl md:text-9xl">
               TOSC<span className="font-normal text-white/80">'26</span>
             </h1>
+               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              Techkriti Open School Championship
+            </h2>
+           
 
             <p className="mx-auto max-w-2xl text-lg text-white/85 sm:text-xl md:text-2xl font-light leading-relaxed">
               The Ultimate Competitive Examination for School Students across India.
